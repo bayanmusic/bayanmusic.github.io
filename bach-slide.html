@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Bach 幻灯片</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #000 url('bach.jpeg') center center/cover no-repeat;
+      position: relative;
+      animation: bgMove 18s ease-in-out infinite alternate;
+    }
+    @keyframes bgMove {
+      0% { background-position: 50% 50%; filter: brightness(0.85) blur(0px) grayscale(0.1); }
+      30% { background-position: 60% 45%; filter: brightness(1.05) blur(2px) grayscale(0.2); }
+      60% { background-position: 40% 55%; filter: brightness(1.1) blur(1.5px) grayscale(0.15); }
+      100% { background-position: 50% 50%; filter: brightness(0.9) blur(0px) grayscale(0.1); }
+    }
+    .slide-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+      font-size: 4rem;
+      color: #fff;
+      text-shadow: 0 0 32px #00fff7, 0 0 12px #ff00cc, 0 0 2px #000;
+      letter-spacing: 0.2em;
+      background: rgba(10, 47, 164, 0.45);
+      border-radius: 18px;
+      padding: 1.2rem 3.5rem;
+      box-shadow: 0 8px 48px #001a4d99;
+      animation: titleGlow 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes titleGlow {
+      0% { text-shadow: 0 0 32px #00fff7, 0 0 12px #ff00cc, 0 0 2px #000; }
+      100% { text-shadow: 0 0 48px #ff00cc, 0 0 24px #00fff7, 0 0 8px #fff; }
+    }
+    @media (max-width: 700px) {
+      .slide-title {
+        font-size: 2rem;
+        padding: 0.7rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-title">JS Bach</div>
+</body>
+</html>

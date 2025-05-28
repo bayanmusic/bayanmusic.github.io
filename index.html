@@ -6,18 +6,50 @@
   <title>霍英泽 | 数字人文课程作品集</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Tab hover underline animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('mouseenter', function() {
+          this.style.boxShadow = '0 0 16px #ff00cc, 0 0 8px #00fff7';
+          this.style.transform = 'translateY(-4px) scale(1.08)';
+        });
+        tab.addEventListener('mouseleave', function() {
+          this.style.boxShadow = '';
+          this.style.transform = '';
+        });
+      });
+    });
+    // Section fade-in on scroll
+    window.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('.section');
+      const reveal = () => {
+        const trigger = window.innerHeight * 0.92;
+        sections.forEach(sec => {
+          const top = sec.getBoundingClientRect().top;
+          if (top < trigger) {
+            sec.classList.add('fade-in');
+          }
+        });
+      };
+      window.addEventListener('scroll', reveal);
+      reveal();
+    });
+  </script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">霍英泽 · 数字人文</div>
-    <ul class="nav-links">
-      <li><a href="#projects">数字项目</a></li>
-      <li><a href="#cv">简历</a></li>
-      <li><a href="#books">著作</a></li>
-      <li><a href="#courses">课程资料</a></li>
-    </ul>
-  </nav>
-  <main>
+    <div class="header">
+      <div class="logo">霍英泽 · 数字人文</div>
+      <h1 class="main-title">数字人文课程作品集</h1>
+      <div class="tab-bar">
+        <a class="tab" href="#projects">数字项目</a>
+        <a class="tab" href="#cv">简历</a>
+        <a class="tab" href="#books">著作</a>
+        <a class="tab" href="#courses">课程资料</a>
+      </div>
+    </div>
+    <main>
     <section id="projects" class="section">
       <h1>数字项目</h1>
       <p style="color: #ffe066; font-size: 1rem; margin-top: -1rem; margin-bottom: 2rem; font-weight: 500;">相比于以音乐作为声音媒介（如音乐指纹、哼歌识曲等）和音乐作为文本素材（如音乐信息检索）而主导的研究，乐谱的数字化研究发展较为迟缓。</p>
