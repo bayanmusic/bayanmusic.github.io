@@ -6,17 +6,18 @@
   <title>文瀛青年学者论坛 - 海报</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
     body {
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      background: #0a2fa4 url('composers-list.jpg') center center/cover no-repeat;
+      background: #3a6ee8 url('composers-list.jpg') center center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .poster {
-      background: rgba(10,47,164,0.92);
+      background: rgba(58,110,232,0.88);
       color: #fff;
       width: 600px;
       height: 850px;
@@ -74,6 +75,51 @@
       box-shadow: 0 4px 32px #0ff2ff55;
       margin-bottom: 1.5rem;
     }
+    .subtab-bar {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+    .subtab {
+      background: #1a0033;
+      color: #fff;
+      border: 2px solid #ff00cc;
+      border-radius: 6px 6px 0 0;
+      font-family: 'Orbitron', 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.4rem 1.2rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      margin-bottom: -2px;
+    }
+    .subtab.active, .subtab:hover {
+      background: #ff00cc;
+      color: #00fff7;
+      box-shadow: 0 0 8px #ff00cc, 0 0 2px #00fff7;
+    }
+    .subtab-content {
+      width: 100%;
+      margin-bottom: 1.2rem;
+    }
+    .play-btn {
+      background: #00fff7;
+      color: #1a0033;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 0.5rem 1.5rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #0ff2ff44;
+      transition: background 0.2s, color 0.2s;
+    }
+    .play-btn:hover {
+      background: #ff00cc;
+      color: #fff;
+    }
     @media (max-width: 700px) {
       .poster {
         width: 95vw;
@@ -102,6 +148,28 @@
     <div class="name">mySketch: Pelican on a Bike</div>
     <img src="mySketch.png" alt="mySketch: Pelican on a Bike" class="project-image" />
     <div class="desc">本项目为 p5.js 交互动画，展现一只骑自行车的鹈鹕，配有动态云朵和运动轨迹。鹈鹕在屏幕中间区域来回移动，场景可自适应窗口大小。</div>
+    <div class="subtab-bar">
+      <button class="subtab active" onclick="showSubtab('desc')">简介</button>
+      <button class="subtab" onclick="showSubtab('video')">演示视频</button>
+    </div>
+    <div id="subtab-desc" class="subtab-content" style="display:block;">
+      <div class="desc">本项目为 p5.js 交互动画，展现一只骑自行车的鹈鹕，配有动态云朵和运动轨迹。鹈鹕在屏幕中间区域来回移动，场景可自适应窗口大小。</div>
+    </div>
+    <div id="subtab-video" class="subtab-content" style="display:none; text-align:center;">
+      <video id="mySketchVideo" width="90%" style="border-radius:16px; box-shadow:0 4px 32px #0ff2ff55; margin:1rem 0;" controls>
+        <source src="air.mp4" type="video/mp4">
+        您的浏览器不支持视频播放。
+      </video>
+      <button onclick="document.getElementById('mySketchVideo').play()" class="play-btn">▶ 播放</button>
+    </div>
+    <script>
+      function showSubtab(tab) {
+        document.querySelectorAll('.subtab').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.subtab-content').forEach(div => div.style.display = 'none');
+        document.querySelector('.subtab[onclick*="' + tab + '"]').classList.add('active');
+        document.getElementById('subtab-' + tab).style.display = 'block';
+      }
+    </script>
   </div>
 </body>
 </html>
