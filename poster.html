@@ -59,6 +59,21 @@
       margin-bottom: 1.5rem;
       letter-spacing: 0.1em;
     }
+    .desc {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #ffe066;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+    }
+    .project-image {
+      max-width: 90%;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px #0ff2ff55;
+      margin-bottom: 1.5rem;
+    }
     @media (max-width: 700px) {
       .poster {
         width: 95vw;
@@ -68,7 +83,7 @@
       .title {
         font-size: 2rem;
       }
-      .info, .name {
+      .info, .name, .desc {
         font-size: 1.2rem;
       }
     }
@@ -83,6 +98,10 @@
     <div class="name">霍秋梦</div>
     <div class="label">评议人</div>
     <div class="name">霍安歌</div>
+    <div class="label">项目展示</div>
+    <div class="name">mySketch: Pelican on a Bike</div>
+    <img src="mySketch.png" alt="mySketch: Pelican on a Bike" class="project-image" />
+    <div class="desc">本项目为 p5.js 交互动画，展现一只骑自行车的鹈鹕，配有动态云朵和运动轨迹。鹈鹕在屏幕中间区域来回移动，场景可自适应窗口大小。</div>
   </div>
 </body>
 </html>
