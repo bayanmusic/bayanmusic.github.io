@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>古典音乐思维导图</title>
+  <style>
+    body {
+      background: #eaf6ff;
+      font-family: 'Noto Sans SC', 'Heiti SC', '黑体', 'SimHei', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .mindmap-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 0;
+    }
+    .mindmap-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #2a3a6e;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.15em;
+    }
+    .mindmap {
+      display: flex;
+      gap: 5rem;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .branch {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #b3cfff44;
+      padding: 2rem 2.5rem;
+      min-width: 220px;
+      margin-bottom: 1.5rem;
+    }
+    .branch-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #3a6ee8;
+      margin-bottom: 1.2rem;
+      text-align: center;
+    }
+    .sub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #2a3a6e;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .sub-list li {
+      margin-bottom: 0.7rem;
+    }
+    @media (max-width: 700px) {
+      .mindmap {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .branch {
+        min-width: 0;
+        width: 90vw;
+        padding: 1.2rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mindmap-container">
+    <div class="mindmap-title">古典音乐</div>
+    <div class="mindmap">
+      <div class="branch">
+        <div class="branch-title">前古典主义</div>
+        <ul class="sub-list">
+          <li>器乐</li>
+          <li>声乐</li>
+        </ul>
+      </div>
+      <div class="branch">
+        <div class="branch-title">维也纳时期</div>
+        <ul class="sub-list">
+          <li>海顿</li>
+          <li>贝多芬</li>
+          <li>莫扎特</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
