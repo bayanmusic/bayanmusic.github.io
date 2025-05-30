@@ -3,207 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文瀛青年学者论坛 - 海报</title>
+  <title>山西大学音乐学院文瀛学者论坛（第五期）</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
     body {
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      background: #3a6ee8 url('composers-list.jpg') center center/cover no-repeat;
+      background: linear-gradient(135deg, #eaf6ff 0%, #7be495 100%);
       display: flex;
       align-items: center;
-      justify-content: center;
-    }
-    .poster {
-      background: rgba(58,110,232,0.88);
-      color: #fff;
-      width: 800px;
-      height: 600px;
-      border-radius: 32px;
-      box-shadow: 0 8px 48px #001a4d99;
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
       justify-content: center;
       font-family: 'Noto Sans SC', 'Heiti SC', '黑体', 'SimHei', Arial, sans-serif;
-      padding: 0;
+    }
+    .poster {
+      background: #fff;
+      color: #222;
+      width: 720px;
+      border-radius: 32px;
+      box-shadow: 0 8px 48px #b3cfff88;
+      padding: 48px 40px 32px 40px;
       box-sizing: border-box;
-      overflow: hidden;
-    }
-    .poster-left {
-      flex: 1.1;
-      background: rgba(255,255,255,0.08);
-      padding: 40px 30px 40px 40px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      border-top-left-radius: 32px;
-      border-bottom-left-radius: 32px;
-    }
-    .poster-right {
-      flex: 1.3;
-      background: rgba(255,255,255,0.13);
-      padding: 40px 30px 40px 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
       align-items: center;
-      border-top-right-radius: 32px;
-      border-bottom-right-radius: 32px;
-      overflow-y: auto;
     }
-    .title {
-      font-size: 2.8rem;
-      font-weight: 900;
-      letter-spacing: 0.15em;
-      margin-bottom: 2.5rem;
-      text-align: center;
-      line-height: 1.2;
-    }
-    .info {
-      font-size: 1.6rem;
-      font-weight: 900;
-      margin: 1.5rem 0;
-      letter-spacing: 0.1em;
-      text-align: center;
-    }
-    .label {
-      font-size: 1.2rem;
-      font-weight: 900;
-      color: #7ecbff;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.2em;
-    }
-    .name {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #fff;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.1em;
-    }
-    .desc {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #ffe066;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      letter-spacing: 0.05em;
-      line-height: 1.6;
-    }
-    .project-image {
-      max-width: 90%;
-      border-radius: 18px;
-      box-shadow: 0 4px 32px #0ff2ff55;
-      margin-bottom: 1.5rem;
-    }
-    .subtab-bar {
-      display: flex;
-      gap: 1.2rem;
-      justify-content: center;
-      margin-bottom: 1.2rem;
-    }
-    .subtab {
-      background: #1a0033;
-      color: #fff;
-      border: 2px solid #ff00cc;
-      border-radius: 6px 6px 0 0;
-      font-family: 'Orbitron', 'Roboto', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 0.4rem 1.2rem;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-      margin-bottom: -2px;
-    }
-    .subtab.active, .subtab:hover {
-      background: #ff00cc;
-      color: #00fff7;
-      box-shadow: 0 0 8px #ff00cc, 0 0 2px #00fff7;
-    }
-    .subtab-content {
-      width: 100%;
-      margin-bottom: 1.2rem;
-    }
-    .play-btn {
-      background: #00fff7;
-      color: #1a0033;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
+    .main-title {
+      font-size: 2.2rem;
       font-weight: bold;
-      padding: 0.5rem 1.5rem;
-      margin-top: 0.5rem;
-      cursor: pointer;
-      box-shadow: 0 2px 8px #0ff2ff44;
-      transition: background 0.2s, color 0.2s;
+      letter-spacing: 0.12em;
+      margin-bottom: 2.2rem;
+      text-align: center;
     }
-    .play-btn:hover {
-      background: #ff00cc;
-      color: #fff;
+    .people-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-bottom: 2.2rem;
+      justify-content: center;
+      align-items: center;
     }
-    @media (max-width: 900px) {
+    .person {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      min-width: 180px;
+    }
+    .person-label {
+      font-size: 1.1rem;
+      color: #3a6ee8;
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+    }
+    .person-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 0.2rem;
+    }
+    .person-img {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3a6ee8;
+      background: #eaf6ff;
+    }
+    .cv {
+      background: #f5faff;
+      border-left: 4px solid #3a6ee8;
+      padding: 1rem 1.5rem;
+      margin: 0.5rem 0 2rem 0;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      color: #2a3a6e;
+      line-height: 1.7;
+    }
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #3a6ee8;
+      margin: 1.5rem 0 0.7rem 0;
+      letter-spacing: 0.08em;
+    }
+    .summary {
+      font-size: 1.08rem;
+      color: #333;
+      background: #fafdff;
+      border-radius: 10px;
+      padding: 1.2rem 1.2rem;
+      margin-bottom: 2.2rem;
+      line-height: 1.8;
+      border-left: 4px solid #b3cfff;
+    }
+    .footer {
+      width: 100%;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #3a6ee8;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      letter-spacing: 0.08em;
+    }
+    @media (max-width: 800px) {
       .poster {
-        flex-direction: column;
         width: 98vw;
-        height: auto;
+        padding: 18px 2vw 18px 2vw;
       }
-      .poster-left, .poster-right {
-        border-radius: 0;
-        padding: 24px 10vw;
+      .people-row {
+        flex-direction: column;
+        gap: 1.2rem;
       }
-      .title {
-        font-size: 2rem;
-      }
-      .info, .name, .desc {
-        font-size: 1.2rem;
+      .person {
+        min-width: 0;
       }
     }
   </style>
 </head>
 <body>
+  <div style="position: absolute; top: 24px; right: 48px; display: flex; gap: 16px; z-index: 10;">
+    <img src="poster/Sxu.png" alt="SXU Logo" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: #fff; border: 2px solid #b3cfff; box-shadow: 0 2px 8px #b3cfff88;" />
+    <img src="poster/music.jpg" alt="Music Logo" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; background: #fff; border: 2px solid #b3cfff; box-shadow: 0 2px 8px #b3cfff88;" />
+  </div>
   <div class="poster">
-    <div class="poster-left">
-      <div class="title">文瀛青年学者论坛</div>
-      <div class="label">主讲人</div>
-      <div class="name">霍英泽</div>
-      <div class="label">主持人</div>
-      <div class="name">霍秋梦</div>
-      <div class="label">评议人</div>
-      <div class="name">霍安歌</div>
-    </div>
-    <div class="poster-right">
-      <div class="label">项目展示</div>
-      <div class="name">mySketch: Pelican on a Bike</div>
-      <img src="mySketch.png" alt="mySketch: Pelican on a Bike" class="project-image" />
-      <div class="desc">本项目为 p5.js 交互动画，展现一只骑自行车的鹈鹕，配有动态云朵和运动轨迹。鹈鹕在屏幕中间区域来回移动，场景可自适应窗口大小。</div>
-      <div class="label">ML5 项目</div>
-      <div class="name">ML5: Machine Learning Demo</div>
-      <div class="subtab-bar">
-        <button class="subtab active" onclick="showSubtab('desc')">简介</button>
-        <button class="subtab" onclick="showSubtab('video')">演示视频</button>
-        <button class="subtab" onclick="window.open('ML5/index.html', '_blank')">ML5 Demo</button>
+    <div style="height: 80px;"></div>
+    <div class="main-title">山西大学音乐学院文瀛学者论坛（第五期）</div>
+    <div class="people-row">
+      <div class="person">
+        <div>
+          <div class="person-label">汇报人</div>
+          <div class="person-name">郑昕</div>
+        </div>
+        <img src="poster/zheng.JPG" alt="郑昕" class="person-img" />
       </div>
-      <div id="subtab-desc" class="subtab-content" style="display:block;">
-        <div class="desc">本项目为 p5.js 交互动画，展现一只骑自行车的鹈鹕，配有动态云朵和运动轨迹。鹈鹕在屏幕中间区域来回移动，场景可自适应窗口大小。</div>
+      <div class="person">
+        <div>
+          <div class="person-label">主持人</div>
+          <div class="person-name">艾力</div>
+        </div>
+        <img src="poster/ai.PNG" alt="艾力" class="person-img" />
       </div>
-      <div id="subtab-video" class="subtab-content" style="display:none; text-align:center;">
-        <video id="mySketchVideo" width="90%" style="border-radius:16px; box-shadow:0 4px 32px #0ff2ff55; margin:1rem 0;" controls>
-          <source src="air.mp4" type="video/mp4">
-          您的浏览器不支持视频播放。
-        </video>
-        <button onclick="document.getElementById('mySketchVideo').play()" class="play-btn">▶ 播放</button>
+      <div class="person">
+        <div>
+          <div class="person-label">评议人</div>
+          <div class="person-name">赵萌</div>
+        </div>
+        <img src="poster/zhao.JPG" alt="赵萌" class="person-img" />
       </div>
     </div>
-    <script>
-      function showSubtab(tab) {
-        document.querySelectorAll('.subtab').forEach(btn => btn.classList.remove('active'));
-        document.querySelectorAll('.subtab-content').forEach(div => div.style.display = 'none');
-        document.querySelector('.subtab[onclick*="' + tab + '"]').classList.add('active');
-        document.getElementById('subtab-' + tab).style.display = 'block';
-      }
-    </script>
+    <div class="cv">
+      <strong>郑昕：</strong>山西大学音乐学院舞蹈系讲师，戏剧与影视学博士<br>
+      研究方向：舞剧<br>
+      主讲课程：舞蹈编导；作品构成；作品创意
+    </div>
+    <div class="section-title">内容摘要</div>
+    <div class="summary">“舞剧的戏剧性”被国内研究者使用得很多，但其含义却总是混沌不明，与“戏剧性”的研究没有形成足够的联系与区别。“舞”与“剧”的构成问题始终横亘在舞剧理论本性问题的讨论中，在当下中国舞剧舞台创作实践中，“戏剧性”被提到了重要的位置。本次沙龙将从舞剧戏剧性存在的问题、舞剧戏剧性的存在域、舞剧戏剧性的变迁三个方面展开讨论，通过梳理舞剧的发展脉络，以期探讨“舞剧戏剧性”的表现形态。</div>
+    <div class="footer">时间：2025年5月30号（周五）下午15:00　｜　地点：音乐学院303</div>
   </div>
 </body>
 </html>
