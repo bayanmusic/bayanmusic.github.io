@@ -1,0 +1,30 @@
+import librosa, librosa.display
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load the audio file
+y, sr = librosa.load('music_sample.mp3')
+
+# Extract tempo and beat frames
+tempo, beats = librosa.beat.beat_track(y=y, sr=sr)
+
+# Get the first element of the tempo if it's an ndarray
+tempo_value = tempo[0] if isinstance(tempo, np.ndarray) else tempo
+
+print("Tempo:", tempo_value)
+
+# Plot the waveform
+plt.figure(figsize=(10, 4))
+librosa.display.waveshow(y, sr=sr)
+
+# Convert the beat frames to time and plot them
+beat_times = librosa.frames_to_time(beats)
+
+# Reduce the number of vertical lines to make them less dense
+plt.vlines(beat_times[::5], -1, 1, color='r', alpha=0.7)  # Show every 5th beat
+
+# Title with BPM value
+plt.title(f'节拍检测示例（BPM={tempo_value:.1f}）')
+
+# Show the plot
+plt.show()
