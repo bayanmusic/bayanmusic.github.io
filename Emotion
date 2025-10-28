@@ -1,0 +1,27 @@
+import librosa
+import numpy as np
+from sklearn.svm import SVC
+
+# === Step 1: 加载样本音频 ===
+# 你可以换成自己的音乐样本
+happy, sr = librosa.load('happy_song.mp3')
+sad, sr = librosa.load('sad_song.mp3')
+
+# === Step 2: 提取特征（MFCC） ===
+happy_mfcc = np.mean(librosa.feature.mfcc(y=happy, sr=sr, n_mfcc=13).T, axis=0)
+sad_mfcc = np.mean(librosa.feature.mfcc(y=sad, sr=sr, n_mfcc=13).T, axis=0)
+
+# === Step 3: 构造训练集 ===
+X_train = np.array([happy_mfcc, sad_mfcc])
+y_train = np.array(['happy', 'sad'])
+
+# === Step 4: 训练模型 ===
+model = SVC(kernel='linear')
+model.fit(X_train, y_train)
+
+# === Step 5: 对新音频进行预测 ===
+test_y, sr = librosa.load('test_music.mp3')
+test_mfcc = np.mean(librosa.feature.mfcc(y=test_y, sr=sr, n_mfcc=13).T, axis=0)
+
+prediction = model.predict([test_mfcc])
+print("预测的情感类别：", prediction[0])
